@@ -1,0 +1,507 @@
+/* Identidade Visual Jéssica Santos - Baseada no site de referência */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Paleta Principal - Baseada no site de referência */
+  --primary: #8B7355; /* Marrom terroso */
+  --primary-dark: #6B5A42;
+  --primary-light: #A08B73;
+  
+  --secondary: #D4A574; /* Dourado suave */
+  --secondary-dark: #B8935F;
+  --secondary-light: #E6C199;
+  
+  /* Cores Accent para navegação */
+  --accent-green: #7FB069;
+  --accent-blue: #6B9BD1;
+  --accent-orange: #F4A261;
+  --accent-purple: #9B7EBD;
+  --accent-cyan: #5DADE2;
+  
+  /* Backgrounds */
+  --background: #F5F5F0; /* Bege claro */
+  --background-white: #FFFFFF;
+  --background-card: #FAFAF8;
+  
+  /* Textos */
+  --text-dark: #2C2C2C;
+  --text-medium: #4A4A4A;
+  --text-light: #6B6B6B;
+  --text-lighter: #8B8B8B;
+  
+  /* Bordas e sombras */
+  --border-light: #E8E8E5;
+  --border-medium: #D0D0CD;
+  --shadow-sm: 0 2px 8px rgba(139, 115, 85, 0.08);
+  --shadow-md: 0 4px 16px rgba(139, 115, 85, 0.12);
+  --shadow-lg: 0 8px 32px rgba(139, 115, 85, 0.16);
+  
+  /* Tipografia */
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+  
+  /* Espaçamentos */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+  
+  /* Border radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 50px;
+  
+  /* Transições */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--background);
+  color: var(--text-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tipografia */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-dark);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: 500;
+}
+
+p {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  color: var(--text-medium);
+  line-height: 1.7;
+}
+
+.text-accent {
+  color: var(--secondary);
+  font-style: italic;
+}
+
+/* Navegação colorida - Baseada no site de referência */
+.nav-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-pill);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  border: 2px solid transparent;
+  font-size: 0.95rem;
+}
+
+.nav-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.nav-pill.inicio {
+  background-color: var(--accent-green);
+  color: white;
+}
+
+.nav-pill.sobre {
+  background-color: var(--accent-blue);
+  color: white;
+}
+
+.nav-pill.portfolio {
+  background-color: var(--accent-orange);
+  color: white;
+}
+
+.nav-pill.servicos {
+  background-color: var(--accent-purple);
+  color: white;
+}
+
+.nav-pill.contato {
+  background-color: var(--accent-cyan);
+  color: white;
+}
+
+.nav-pill.cta {
+  background-color: var(--primary);
+  color: white;
+  font-weight: 600;
+  padding: 1rem 2rem;
+}
+
+.nav-pill.cta:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Botões principais */
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 1rem 2rem;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-accent {
+  background-color: var(--secondary);
+  color: var(--text-dark);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-accent:hover {
+  background-color: var(--secondary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Cards elegantes */
+.card {
+  background-color: var(--background-card);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  border: 1px solid var(--border-light);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-premium {
+  background: linear-gradient(135deg, var(--background-white) 0%, var(--background-card) 100%);
+  border: 2px solid var(--secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-premium::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--secondary) 0%, var(--primary) 100%);
+}
+
+/* Badge de especialização */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--background-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-pill);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-medium);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Métricas de credibilidade */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--spacing-lg);
+  margin: var(--spacing-xl) 0;
+}
+
+.metric {
+  text-align: center;
+}
+
+.metric-number {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--secondary);
+  display: block;
+}
+
+.metric-label {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+/* Grid assimétrico para portfólio */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin: var(--spacing-xl) 0;
+}
+
+.portfolio-item {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.portfolio-item:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Seções com espaçamento generoso */
+.section {
+  padding: var(--spacing-2xl) 0;
+}
+
+.section-hero {
+  padding: calc(var(--spacing-2xl) * 1.5) 0;
+  background: linear-gradient(135deg, var(--background) 0%, var(--background-card) 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* Layout duas colunas para seção sobre */
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl);
+  align-items: center;
+}
+
+.about-image {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.about-image img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* Formulários elegantes */
+.form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.form-input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  transition: all var(--transition-normal);
+  background-color: var(--background-white);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .nav-pill {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+  
+  .btn-primary,
+  .btn-secondary,
+  .btn-accent {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Animações suaves */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Estados de hover para interatividade */
+.interactive:hover {
+  transform: translateY(-2px);
+  transition: transform var(--transition-normal);
+}
+
+/* Gradientes sutis */
+.gradient-bg {
+  background: linear-gradient(135deg, var(--background) 0%, var(--background-card) 50%, var(--background) 100%);
+}
+
+/* Separadores elegantes */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--border-medium) 50%, transparent 100%);
+  margin: var(--spacing-xl) 0;
+}
+
+/* Overlay para imagens */
+.image-overlay {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.image-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(139, 115, 85, 0.1) 0%, rgba(212, 165, 116, 0.1) 100%);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.image-overlay:hover::after {
+  opacity: 1;
+}
+

@@ -1,0 +1,414 @@
+/* Estilos para Calendário de Agendamento */
+
+.calendario-agendamento {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.calendario-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.calendario-header h3 {
+  color: #1f2937;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.calendario-header p {
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.calendario-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .calendario-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* Calendário Principal */
+.calendario-main {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Estilos do react-booking-calendar */
+.calendario-main .react-booking-calendar {
+  width: 100%;
+}
+
+.calendario-main .react-booking-calendar .calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+.calendario-main .react-booking-calendar .calendar-header button {
+  background: #f3f4f6;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.calendario-main .react-booking-calendar .calendar-header button:hover {
+  background: #e5e7eb;
+}
+
+.calendario-main .react-booking-calendar .calendar-month {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.calendario-main .react-booking-calendar .calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.calendario-main .react-booking-calendar .calendar-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+  position: relative;
+}
+
+.calendario-main .react-booking-calendar .calendar-day:hover {
+  background: #f3f4f6;
+}
+
+.calendario-main .react-booking-calendar .calendar-day.available {
+  background: #f0fdf4;
+  color: #166534;
+  border: 2px solid #bbf7d0;
+}
+
+.calendario-main .react-booking-calendar .calendar-day.available:hover {
+  background: #dcfce7;
+  border-color: #86efac;
+}
+
+.calendario-main .react-booking-calendar .calendar-day.selected {
+  background: #3b82f6;
+  color: white;
+  border: 2px solid #1d4ed8;
+}
+
+.calendario-main .react-booking-calendar .calendar-day.reserved {
+  background: #fef3c7;
+  color: #92400e;
+  border: 2px solid #fbbf24;
+  cursor: not-allowed;
+}
+
+.calendario-main .react-booking-calendar .calendar-day.disabled {
+  background: #f9fafb;
+  color: #d1d5db;
+  cursor: not-allowed;
+}
+
+/* Legenda */
+.calendario-legenda {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.legenda-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.legenda-item span:first-child {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  display: block;
+}
+
+.cor-disponivel {
+  background: #10b981;
+}
+
+.cor-agendado {
+  background: #fbbf24;
+}
+
+.cor-confirmado {
+  background: #3b82f6;
+}
+
+.cor-realizado {
+  background: #8b5cf6;
+}
+
+/* Sidebar */
+.calendario-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.agendamento-form {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.agendamento-form h4 {
+  color: #1f2937;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  color: #374151;
+  font-weight: 500;
+  margin-bottom: 6px;
+  font-size: 0.875rem;
+}
+
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  transition: border-color 0.2s;
+  background: white;
+}
+
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Resumo do Agendamento */
+.resumo-agendamento {
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+.resumo-agendamento h5 {
+  color: #1e293b;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.resumo-agendamento p {
+  color: #475569;
+  font-size: 0.875rem;
+  margin-bottom: 4px;
+}
+
+.resumo-agendamento p:last-child {
+  margin-bottom: 0;
+  font-weight: 600;
+  color: #059669;
+}
+
+/* Botões */
+.btn-agendar {
+  width: 100%;
+  padding: 12px 20px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-agendar:hover:not(:disabled) {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.btn-agendar:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Sugestões de Datas */
+.sugestoes-datas {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.sugestoes-datas h5 {
+  color: #1f2937;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.btn-sugestao {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  color: #475569;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.btn-sugestao:hover {
+  background: #e2e8f0;
+  border-color: #cbd5e1;
+  transform: translateX(4px);
+}
+
+.btn-sugestao:last-child {
+  margin-bottom: 0;
+}
+
+/* Loading */
+.calendario-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  color: #6b7280;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f4f6;
+  border-top: 4px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsividade */
+@media (max-width: 640px) {
+  .calendario-agendamento {
+    padding: 16px;
+  }
+  
+  .calendario-header h3 {
+    font-size: 1.5rem;
+  }
+  
+  .calendario-legenda {
+    gap: 12px;
+  }
+  
+  .legenda-item {
+    font-size: 0.75rem;
+  }
+  
+  .agendamento-form,
+  .sugestoes-datas {
+    padding: 16px;
+  }
+}
+
+/* Animações */
+.calendario-agendamento * {
+  transition: all 0.2s ease-in-out;
+}
+
+.agendamento-form,
+.sugestoes-datas {
+  animation: slideInUp 0.3s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Melhorias de acessibilidade */
+.btn-agendar:focus,
+.btn-sugestao:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Estados de hover melhorados */
+.calendario-main .react-booking-calendar .calendar-day.available:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+.calendario-main .react-booking-calendar .calendar-day.selected {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+

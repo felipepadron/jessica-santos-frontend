@@ -1,0 +1,441 @@
+/* 🎨 DESIGN SYSTEM PREMIUM - JÉSSICA SANTOS FOTOGRAFIA */
+
+/* ===== PALETA DE CORES PREMIUM ===== */
+:root {
+  /* Dourado Elegante - Cor Principal */
+  --js-gold-50: #FFFDF7;
+  --js-gold-100: #FEF9E7;
+  --js-gold-200: #FDF2C4;
+  --js-gold-300: #FCEA9C;
+  --js-gold-400: #F9DF6B;
+  --js-gold-500: #D4AF37; /* Dourado principal */
+  --js-gold-600: #B8941F;
+  --js-gold-700: #9C7A1A;
+  --js-gold-800: #7D6115;
+  --js-gold-900: #5E4910;
+
+  /* Neutros Sofisticados */
+  --js-neutral-50: #FAFAFA;  /* Branco quente */
+  --js-neutral-100: #F5F5F5;
+  --js-neutral-200: #E5E5E5;
+  --js-neutral-300: #D4D4D4;
+  --js-neutral-400: #A3A3A3;
+  --js-neutral-500: #737373;
+  --js-neutral-600: #525252;
+  --js-neutral-700: #404040;
+  --js-neutral-800: #262626;
+  --js-neutral-900: #1A1A1A; /* Preto elegante */
+
+  /* Acentos Fotografia */
+  --js-accent-warm: #E8B4A0;   /* Rosa suave fotografia */
+  --js-accent-cool: #A0C4E8;   /* Azul suave profissional */
+
+  /* Gradientes Premium */
+  --js-gradient-gold: linear-gradient(135deg, var(--js-gold-400) 0%, var(--js-gold-600) 100%);
+  --js-gradient-elegant: linear-gradient(135deg, var(--js-neutral-50) 0%, var(--js-neutral-100) 100%);
+  --js-gradient-luxury: linear-gradient(135deg, var(--js-gold-500) 0%, var(--js-gold-700) 50%, var(--js-neutral-900) 100%);
+
+  /* Sombras Premium */
+  --js-shadow-premium: 0 10px 40px rgba(212, 175, 55, 0.1);
+  --js-shadow-premium-lg: 0 20px 60px rgba(212, 175, 55, 0.15);
+  --js-shadow-elegant: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --js-shadow-elegant-lg: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --js-shadow-luxury: 0 25px 80px rgba(212, 175, 55, 0.2);
+
+  /* Tipografia Hierárquica */
+  --js-font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  --js-font-weight-light: 300;
+  --js-font-weight-regular: 400;
+  --js-font-weight-medium: 500;
+  --js-font-weight-semibold: 600;
+  --js-font-weight-bold: 700;
+
+  /* Escalas Tipográficas */
+  --js-text-xs: 0.75rem;     /* 12px */
+  --js-text-sm: 0.875rem;    /* 14px */
+  --js-text-base: 1rem;      /* 16px */
+  --js-text-lg: 1.125rem;    /* 18px */
+  --js-text-xl: 1.25rem;     /* 20px */
+  --js-text-2xl: 1.5rem;     /* 24px */
+  --js-text-3xl: 1.875rem;   /* 30px */
+  --js-text-4xl: 2.25rem;    /* 36px */
+  --js-text-5xl: 3rem;       /* 48px */
+  --js-text-6xl: 3.75rem;    /* 60px */
+
+  /* Espaçamentos Harmônicos */
+  --js-space-1: 0.25rem;     /* 4px */
+  --js-space-2: 0.5rem;      /* 8px */
+  --js-space-3: 0.75rem;     /* 12px */
+  --js-space-4: 1rem;        /* 16px */
+  --js-space-5: 1.25rem;     /* 20px */
+  --js-space-6: 1.5rem;      /* 24px */
+  --js-space-8: 2rem;        /* 32px */
+  --js-space-10: 2.5rem;     /* 40px */
+  --js-space-12: 3rem;       /* 48px */
+  --js-space-16: 4rem;       /* 64px */
+  --js-space-20: 5rem;       /* 80px */
+  --js-space-24: 6rem;       /* 96px */
+
+  /* Bordas e Raios */
+  --js-radius-sm: 0.375rem;   /* 6px */
+  --js-radius-md: 0.5rem;     /* 8px */
+  --js-radius-lg: 0.75rem;    /* 12px */
+  --js-radius-xl: 1rem;       /* 16px */
+  --js-radius-2xl: 1.5rem;    /* 24px */
+  --js-radius-full: 9999px;
+
+  /* Transições Suaves */
+  --js-transition-fast: 150ms ease-out;
+  --js-transition-normal: 250ms ease-out;
+  --js-transition-slow: 350ms ease-out;
+  --js-transition-luxury: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Z-Index Layers */
+  --js-z-dropdown: 1000;
+  --js-z-sticky: 1020;
+  --js-z-fixed: 1030;
+  --js-z-modal-backdrop: 1040;
+  --js-z-modal: 1050;
+  --js-z-popover: 1060;
+  --js-z-tooltip: 1070;
+  --js-z-toast: 1080;
+}
+
+/* ===== RESET E BASE STYLES ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--js-font-family);
+  font-weight: var(--js-font-weight-regular);
+  line-height: 1.6;
+  color: var(--js-neutral-800);
+  background-color: var(--js-neutral-50);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== COMPONENTES BASE PREMIUM ===== */
+
+/* Botões Premium */
+.btn-premium {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--js-space-2);
+  padding: var(--js-space-3) var(--js-space-6);
+  font-family: var(--js-font-family);
+  font-weight: var(--js-font-weight-semibold);
+  font-size: var(--js-text-base);
+  line-height: 1.5;
+  text-decoration: none;
+  border: none;
+  border-radius: var(--js-radius-lg);
+  cursor: pointer;
+  transition: all var(--js-transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-premium::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left var(--js-transition-luxury);
+}
+
+.btn-premium:hover::before {
+  left: 100%;
+}
+
+.btn-premium-gold {
+  background: var(--js-gradient-gold);
+  color: white;
+  box-shadow: var(--js-shadow-premium);
+}
+
+.btn-premium-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--js-shadow-premium-lg);
+}
+
+.btn-premium-outline {
+  background: transparent;
+  color: var(--js-gold-600);
+  border: 2px solid var(--js-gold-500);
+}
+
+.btn-premium-outline:hover {
+  background: var(--js-gold-500);
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Cards Premium */
+.card-premium {
+  background: white;
+  border-radius: var(--js-radius-xl);
+  box-shadow: var(--js-shadow-elegant);
+  overflow: hidden;
+  transition: all var(--js-transition-normal);
+  border: 1px solid var(--js-neutral-200);
+}
+
+.card-premium:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--js-shadow-elegant-lg);
+}
+
+.card-premium-luxury {
+  background: var(--js-gradient-elegant);
+  border: 1px solid var(--js-gold-200);
+  box-shadow: var(--js-shadow-premium);
+}
+
+.card-premium-luxury:hover {
+  box-shadow: var(--js-shadow-luxury);
+}
+
+/* Inputs Premium */
+.input-premium {
+  width: 100%;
+  padding: var(--js-space-4) var(--js-space-5);
+  font-family: var(--js-font-family);
+  font-size: var(--js-text-base);
+  color: var(--js-neutral-800);
+  background: white;
+  border: 2px solid var(--js-neutral-200);
+  border-radius: var(--js-radius-lg);
+  transition: all var(--js-transition-normal);
+  outline: none;
+}
+
+.input-premium:focus {
+  border-color: var(--js-gold-500);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.input-premium::placeholder {
+  color: var(--js-neutral-400);
+}
+
+/* Tipografia Premium */
+.heading-luxury {
+  font-family: var(--js-font-family);
+  font-weight: var(--js-font-weight-bold);
+  line-height: 1.2;
+  color: var(--js-neutral-900);
+  letter-spacing: -0.025em;
+}
+
+.heading-1 {
+  font-size: var(--js-text-6xl);
+  margin-bottom: var(--js-space-6);
+}
+
+.heading-2 {
+  font-size: var(--js-text-5xl);
+  margin-bottom: var(--js-space-5);
+}
+
+.heading-3 {
+  font-size: var(--js-text-4xl);
+  margin-bottom: var(--js-space-4);
+}
+
+.text-gold {
+  color: var(--js-gold-600);
+}
+
+.text-gradient-gold {
+  background: var(--js-gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animações Premium */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.4s ease-out;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, var(--js-neutral-200) 25%, var(--js-neutral-100) 50%, var(--js-neutral-200) 75%);
+  background-size: 200px 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Utilitários Premium */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.gold-accent {
+  position: relative;
+}
+
+.gold-accent::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--js-gradient-gold);
+  border-radius: var(--js-radius-full);
+}
+
+.luxury-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--js-space-6);
+}
+
+/* Responsividade Premium */
+@media (max-width: 768px) {
+  .heading-1 {
+    font-size: var(--js-text-4xl);
+  }
+  
+  .heading-2 {
+    font-size: var(--js-text-3xl);
+  }
+  
+  .heading-3 {
+    font-size: var(--js-text-2xl);
+  }
+  
+  .luxury-container {
+    padding: 0 var(--js-space-4);
+  }
+  
+  .btn-premium {
+    padding: var(--js-space-3) var(--js-space-5);
+    font-size: var(--js-text-sm);
+  }
+}
+
+/* Estados de Loading Premium */
+.loading-skeleton {
+  background: var(--js-gradient-elegant);
+  border-radius: var(--js-radius-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.loading-skeleton::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+  animation: shimmer 2s infinite;
+}
+
+/* Micro-interações Premium */
+.hover-lift {
+  transition: transform var(--js-transition-normal);
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+.hover-glow {
+  transition: box-shadow var(--js-transition-normal);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.hover-scale {
+  transition: transform var(--js-transition-normal);
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Acessibilidade Premium */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.focus-visible {
+  outline: 2px solid var(--js-gold-500);
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .btn-premium,
+  .card-premium {
+    box-shadow: none;
+  }
+  
+  .text-gradient-gold {
+    color: var(--js-gold-600);
+    -webkit-text-fill-color: initial;
+  }
+}
+

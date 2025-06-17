@@ -1,0 +1,307 @@
+/* 🎨 DESIGN SYSTEM AUTÊNTICO - JÉSSICA SANTOS FOTOGRAFIA */
+
+/* ===== PALETA DE CORES REAL ===== */
+:root {
+  /* Cores Principais - Baseadas na Marca Real */
+  --js-rose: #E8B4A0;           /* Rosa suave feminino */
+  --js-rose-light: #F2C4B3;    /* Rosa claro */
+  --js-rose-dark: #D49A85;     /* Rosa escuro */
+  
+  --js-beige: #F5F1EB;         /* Bege elegante */
+  --js-beige-light: #FAF7F2;   /* Bege muito claro */
+  --js-beige-dark: #E8E0D6;    /* Bege escuro */
+  
+  --js-green: #A8C4A2;         /* Verde suave natural */
+  --js-green-light: #B8D1B3;   /* Verde claro */
+  --js-green-dark: #8FB089;    /* Verde escuro */
+  
+  --js-brown: #8B6F47;         /* Marrom quente terroso */
+  --js-brown-light: #A08660;   /* Marrom claro */
+  --js-brown-dark: #6D5535;    /* Marrom escuro */
+  
+  /* Neutros Sofisticados */
+  --js-white: #FFFFFF;         /* Branco puro */
+  --js-neutral-50: #FDFCFA;    /* Branco quente */
+  --js-neutral-100: #F7F5F2;   /* Cinza muito claro */
+  --js-neutral-200: #E8E4DF;   /* Cinza claro */
+  --js-neutral-300: #D1C7BD;   /* Cinza médio claro */
+  --js-neutral-400: #A69B8E;   /* Cinza médio */
+  --js-neutral-500: #7A6F63;   /* Cinza */
+  --js-neutral-600: #5D5349;   /* Cinza escuro */
+  --js-neutral-700: #453E36;   /* Cinza muito escuro */
+  --js-neutral-800: #2D2823;   /* Quase preto */
+  --js-neutral-900: #1A1714;   /* Preto elegante */
+  
+  /* Gradientes Femininos */
+  --js-gradient-rose: linear-gradient(135deg, var(--js-rose-light) 0%, var(--js-rose) 100%);
+  --js-gradient-warm: linear-gradient(135deg, var(--js-beige) 0%, var(--js-rose-light) 100%);
+  --js-gradient-natural: linear-gradient(135deg, var(--js-green-light) 0%, var(--js-beige) 100%);
+  --js-gradient-earth: linear-gradient(135deg, var(--js-brown-light) 0%, var(--js-rose) 100%);
+  
+  /* Sombras Suaves */
+  --js-shadow-sm: 0 1px 2px 0 rgba(139, 111, 71, 0.05);
+  --js-shadow: 0 1px 3px 0 rgba(139, 111, 71, 0.1), 0 1px 2px 0 rgba(139, 111, 71, 0.06);
+  --js-shadow-md: 0 4px 6px -1px rgba(139, 111, 71, 0.1), 0 2px 4px -1px rgba(139, 111, 71, 0.06);
+  --js-shadow-lg: 0 10px 15px -3px rgba(139, 111, 71, 0.1), 0 4px 6px -2px rgba(139, 111, 71, 0.05);
+  --js-shadow-xl: 0 20px 25px -5px rgba(139, 111, 71, 0.1), 0 10px 10px -5px rgba(139, 111, 71, 0.04);
+  
+  /* Tipografia */
+  --js-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --js-font-size-xs: 0.75rem;    /* 12px */
+  --js-font-size-sm: 0.875rem;   /* 14px */
+  --js-font-size-base: 1rem;     /* 16px */
+  --js-font-size-lg: 1.125rem;   /* 18px */
+  --js-font-size-xl: 1.25rem;    /* 20px */
+  --js-font-size-2xl: 1.5rem;    /* 24px */
+  --js-font-size-3xl: 1.875rem;  /* 30px */
+  --js-font-size-4xl: 2.25rem;   /* 36px */
+  --js-font-size-5xl: 3rem;      /* 48px */
+  
+  /* Espaçamentos */
+  --js-space-1: 0.25rem;   /* 4px */
+  --js-space-2: 0.5rem;    /* 8px */
+  --js-space-3: 0.75rem;   /* 12px */
+  --js-space-4: 1rem;      /* 16px */
+  --js-space-5: 1.25rem;   /* 20px */
+  --js-space-6: 1.5rem;    /* 24px */
+  --js-space-8: 2rem;      /* 32px */
+  --js-space-10: 2.5rem;   /* 40px */
+  --js-space-12: 3rem;     /* 48px */
+  --js-space-16: 4rem;     /* 64px */
+  --js-space-20: 5rem;     /* 80px */
+  
+  /* Border Radius */
+  --js-radius-sm: 0.375rem;  /* 6px */
+  --js-radius: 0.5rem;       /* 8px */
+  --js-radius-md: 0.75rem;   /* 12px */
+  --js-radius-lg: 1rem;      /* 16px */
+  --js-radius-xl: 1.5rem;    /* 24px */
+  --js-radius-full: 9999px;  /* Circular */
+  
+  /* Transições */
+  --js-transition-fast: 150ms ease-in-out;
+  --js-transition: 200ms ease-in-out;
+  --js-transition-slow: 300ms ease-in-out;
+}
+
+/* ===== CLASSES UTILITÁRIAS AUTÊNTICAS ===== */
+
+/* Container Luxury */
+.luxury-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--js-space-6);
+}
+
+@media (min-width: 768px) {
+  .luxury-container {
+    padding: 0 var(--js-space-8);
+  }
+}
+
+/* Glass Effect Feminino */
+.glass-effect {
+  background: rgba(245, 241, 235, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(232, 180, 160, 0.2);
+}
+
+/* Hover Effects Suaves */
+.hover-lift {
+  transition: transform var(--js-transition), box-shadow var(--js-transition);
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--js-shadow-lg);
+}
+
+.hover-scale {
+  transition: transform var(--js-transition-fast);
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Gradientes de Texto */
+.text-gradient-rose {
+  background: var(--js-gradient-rose);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-warm {
+  background: var(--js-gradient-warm);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animações Suaves */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out;
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Sombras Premium Femininas */
+.shadow-premium {
+  box-shadow: 
+    0 4px 6px -1px rgba(232, 180, 160, 0.1),
+    0 2px 4px -1px rgba(232, 180, 160, 0.06),
+    0 0 0 1px rgba(245, 241, 235, 0.05);
+}
+
+.shadow-premium-lg {
+  box-shadow: 
+    0 20px 25px -5px rgba(232, 180, 160, 0.1),
+    0 10px 10px -5px rgba(232, 180, 160, 0.04),
+    0 0 0 1px rgba(245, 241, 235, 0.05);
+}
+
+/* Estados de Foco Femininos */
+.focus-ring-rose {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.focus-ring-rose:focus {
+  outline: 2px solid var(--js-rose);
+  outline-offset: 2px;
+}
+
+/* Botões Autênticos */
+.btn-rose {
+  background: var(--js-gradient-rose);
+  color: var(--js-white);
+  border: none;
+  padding: var(--js-space-3) var(--js-space-6);
+  border-radius: var(--js-radius-lg);
+  font-weight: 500;
+  transition: all var(--js-transition);
+  box-shadow: var(--js-shadow);
+}
+
+.btn-rose:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--js-shadow-lg);
+}
+
+.btn-beige {
+  background: var(--js-beige);
+  color: var(--js-brown);
+  border: 1px solid var(--js-beige-dark);
+  padding: var(--js-space-3) var(--js-space-6);
+  border-radius: var(--js-radius-lg);
+  font-weight: 500;
+  transition: all var(--js-transition);
+}
+
+.btn-beige:hover {
+  background: var(--js-beige-dark);
+  border-color: var(--js-brown-light);
+}
+
+/* Cards Femininos */
+.card-feminine {
+  background: var(--js-white);
+  border-radius: var(--js-radius-xl);
+  padding: var(--js-space-6);
+  box-shadow: var(--js-shadow-premium);
+  border: 1px solid var(--js-neutral-100);
+  transition: all var(--js-transition);
+}
+
+.card-feminine:hover {
+  box-shadow: var(--js-shadow-premium-lg);
+  transform: translateY(-2px);
+}
+
+/* Inputs Elegantes */
+.input-elegant {
+  width: 100%;
+  padding: var(--js-space-4);
+  border: 2px solid var(--js-neutral-200);
+  border-radius: var(--js-radius-lg);
+  font-size: var(--js-font-size-base);
+  transition: all var(--js-transition);
+  background: var(--js-white);
+}
+
+.input-elegant:focus {
+  outline: none;
+  border-color: var(--js-rose);
+  box-shadow: 0 0 0 3px rgba(232, 180, 160, 0.1);
+}
+
+/* Badges Suaves */
+.badge-rose {
+  background: var(--js-rose-light);
+  color: var(--js-brown);
+  padding: var(--js-space-1) var(--js-space-3);
+  border-radius: var(--js-radius-full);
+  font-size: var(--js-font-size-sm);
+  font-weight: 500;
+}
+
+.badge-green {
+  background: var(--js-green-light);
+  color: var(--js-brown);
+  padding: var(--js-space-1) var(--js-space-3);
+  border-radius: var(--js-radius-full);
+  font-size: var(--js-font-size-sm);
+  font-weight: 500;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .luxury-container {
+    padding: 0 var(--js-space-4);
+  }
+  
+  .card-feminine {
+    padding: var(--js-space-4);
+  }
+}
+
+/* Acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  .hover-lift,
+  .hover-scale,
+  .animate-fade-in-up,
+  .animate-pulse-soft {
+    animation: none;
+    transition: none;
+  }
+  
+  .hover-lift:hover,
+  .hover-scale:hover {
+    transform: none;
+  }
+}
+

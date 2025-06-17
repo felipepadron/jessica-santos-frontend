@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* MOBILE FIRST - Identidade Visual Jéssica Santos */
+
+:root {
+  /* Paleta Terrosa Sofisticada */
+  --primary: #8B6F47; /* Marrom terroso principal */
+  --primary-dark: #6B5635;
+  --primary-light: #A08B73;
+  
+  --secondary: #D4A574; /* Dourado elegante */
+  --secondary-dark: #B8935F;
+  --secondary-light: #E6C199;
+  
+  /* Cores Accent Vibrantes */
+  --green: #22C55E; /* Verde vibrante */
+  --blue: #3B82F6; /* Azul vibrante */
+  --orange: #F97316; /* Laranja vibrante */
+  --purple: #A855F7; /* Roxo vibrante */
+  --cyan: #06B6D4; /* Ciano vibrante */
+  --pink: #EC4899; /* Rosa vibrante */
+  
+  /* Backgrounds */
+  --bg-cream: #FEF7ED; /* Creme suave */
+  --bg-white: #FFFFFF;
+  --bg-warm: #FDF4E6; /* Bege quente */
+  
+  /* Textos */
+  --text-dark: #1F2937;
+  --text-medium: #4B5563;
+  --text-light: #6B7280;
+  
+  /* Sombras */
+  --shadow-soft: 0 4px 20px rgba(139, 111, 71, 0.15);
+  --shadow-medium: 0 8px 30px rgba(139, 111, 71, 0.2);
+  --shadow-strong: 0 12px 40px rgba(139, 111, 71, 0.25);
+}
+
+/* Reset Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif !important;
+  background-color: var(--bg-cream) !important;
+  color: var(--text-dark) !important;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.App {
+  min-height: 100vh;
+  background-color: var(--bg-cream) !important;
+}
+
+/* Tipografia Elegante */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-dark) !important;
+}
+
+h1 {
+  font-size: clamp(2rem, 8vw, 3.5rem) !important;
+  font-weight: 700 !important;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 6vw, 2.5rem) !important;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 5vw, 2rem) !important;
+}
+
+p {
+  font-size: clamp(1rem, 3vw, 1.125rem) !important;
+  color: var(--text-medium) !important;
+  line-height: 1.7 !important;
+}
+
+/* NAVEGAÇÃO MOBILE COLORIDA - FORÇAR ESTILOS */
+
+/* Desktop Navigation Pills */
+.nav-pill-inicio {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, var(--green), #16A34A) !important;
+  color: white !important;
+  border-radius: 50px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  box-shadow: var(--shadow-soft) !important;
+}
+
+.nav-pill-sobre {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, var(--blue), #2563EB) !important;
+  color: white !important;
+  border-radius: 50px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  box-shadow: var(--shadow-soft) !important;
+}
+
+.nav-pill-portfolio {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, var(--orange), #EA580C) !important;
+  color: white !important;
+  border-radius: 50px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  box-shadow: var(--shadow-soft) !important;
+}
+
+.nav-pill-servicos {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, var(--purple), #9333EA) !important;
+  color: white !important;
+  border-radius: 50px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  box-shadow: var(--shadow-soft) !important;
+}
+
+.nav-pill-contato {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, var(--cyan), #0891B2) !important;
+  color: white !important;
+  border-radius: 50px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  box-shadow: var(--shadow-soft) !important;
+}
+
+/* MOBILE Navigation Pills - GRANDES E VISÍVEIS */
+.nav-pill-mobile-inicio {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1rem 1.5rem !important;
+  background: linear-gradient(135deg, var(--green), #16A34A) !important;
+  color: white !important;
+  border-radius: 16px !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  box-shadow: var(--shadow-medium) !important;
+  min-height: 60px !important;
+}
+
+.nav-pill-mobile-sobre {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1rem 1.5rem !important;
+  background: linear-gradient(135deg, var(--blue), #2563EB) !important;
+  color: white !important;
+  border-radius: 16px !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  box-shadow: var(--shadow-medium) !important;
+  min-height: 60px !important;
+}
+
+.nav-pill-mobile-portfolio {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1rem 1.5rem !important;
+  background: linear-gradient(135deg, var(--orange), #EA580C) !important;
+  color: white !important;
+  border-radius: 16px !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  box-shadow: var(--shadow-medium) !important;
+  min-height: 60px !important;
+}
+
+.nav-pill-mobile-servicos {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1rem 1.5rem !important;
+  background: linear-gradient(135deg, var(--purple), #9333EA) !important;
+  color: white !important;
+  border-radius: 16px !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  box-shadow: var(--shadow-medium) !important;
+  min-height: 60px !important;
+}
+
+/* Botões CTA */
+.btn-cta-primary {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  padding: 1rem 2rem !important;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
+  color: white !important;
+  border-radius: 50px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  box-shadow: var(--shadow-medium) !important;
+}
+
+.btn-cta-mobile {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.75rem !important;
+  padding: 1.25rem 2rem !important;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
+  color: white !important;
+  border-radius: 16px !important;
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  box-shadow: var(--shadow-strong) !important;
+  width: 100% !important;
+}
+
+.btn-secondary-mobile {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.75rem !important;
+  padding: 1.25rem 2rem !important;
+  background: transparent !important;
+  color: var(--primary) !important;
+  border: 2px solid var(--primary) !important;
+  border-radius: 16px !important;
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  width: 100% !important;
+}
+
+.btn-secondary-mobile:hover {
+  background: var(--primary) !important;
+  color: white !important;
+}
+
+/* Ícones Sociais */
+.social-icon {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 48px !important;
+  height: 48px !important;
+  background: linear-gradient(135deg, var(--secondary), var(--secondary-dark)) !important;
+  color: white !important;
+  border-radius: 50% !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  box-shadow: var(--shadow-soft) !important;
+}
+
+.social-icon:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: var(--shadow-medium) !important;
+}
+
+/* Hero Section Mobile */
+.hero-mobile {
+  padding: 2rem 1rem !important;
+  background: linear-gradient(135deg, var(--bg-cream) 0%, var(--bg-warm) 100%) !important;
+  text-align: center !important;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif !important;
+  font-size: clamp(2.5rem, 8vw, 4rem) !important;
+  font-weight: 700 !important;
+  color: var(--text-dark) !important;
+  margin-bottom: 1rem !important;
+  line-height: 1.1 !important;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.5rem, 6vw, 2.5rem) !important;
+  color: var(--secondary) !important;
+  font-style: italic !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.hero-description {
+  font-size: clamp(1.1rem, 4vw, 1.25rem) !important;
+  color: var(--text-medium) !important;
+  line-height: 1.6 !important;
+  margin-bottom: 2rem !important;
+  max-width: 600px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Botões Hero Mobile */
+.hero-buttons {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem !important;
+  margin: 2rem 0 !important;
+}
+
+.btn-hero-primary {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.75rem !important;
+  padding: 1.25rem 2rem !important;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
+  color: white !important;
+  border-radius: 16px !important;
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  box-shadow: var(--shadow-strong) !important;
+}
+
+.btn-hero-secondary {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.75rem !important;
+  padding: 1.25rem 2rem !important;
+  background: transparent !important;
+  color: var(--primary) !important;
+  border: 2px solid var(--primary) !important;
+  border-radius: 16px !important;
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Métricas Mobile */
+.metrics-mobile {
+  display: flex !important;
+  justify-content: space-around !important;
+  margin: 2rem 0 !important;
+  padding: 1.5rem !important;
+  background: var(--bg-white) !important;
+  border-radius: 20px !important;
+  box-shadow: var(--shadow-soft) !important;
+}
+
+.metric-mobile {
+  text-align: center !important;
+}
+
+.metric-number-mobile {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: var(--secondary) !important;
+  display: block !important;
+}
+
+.metric-label-mobile {
+  font-size: 0.875rem !important;
+  color: var(--text-light) !important;
+  font-weight: 500 !important;
+}
+
+/* Responsividade Desktop */
+@media (min-width: 1024px) {
+  .hero-buttons {
+    flex-direction: row !important;
+    justify-content: center !important;
+  }
+  
+  .btn-hero-primary,
+  .btn-hero-secondary {
+    width: auto !important;
+  }
+}
+
+/* Hover Effects */
+.nav-pill-inicio:hover,
+.nav-pill-sobre:hover,
+.nav-pill-portfolio:hover,
+.nav-pill-servicos:hover,
+.nav-pill-contato:hover,
+.btn-cta-primary:hover,
+.btn-hero-primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: var(--shadow-strong) !important;
+}
+
+.nav-pill-mobile-inicio:active,
+.nav-pill-mobile-sobre:active,
+.nav-pill-mobile-portfolio:active,
+.nav-pill-mobile-servicos:active,
+.btn-cta-mobile:active {
+  transform: scale(0.98) !important;
+}
+
+/* Animações */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out !important;
+}
+
+
+/* Animações para o AccessButton */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* Melhorias para o botão flutuante */
+.access-button-shadow {
+  box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+}
+
+.access-button-shadow:hover {
+  box-shadow: 0 15px 35px rgba(245, 158, 11, 0.4);
+}
+
